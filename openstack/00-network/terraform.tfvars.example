@@ -1,0 +1,8 @@
+auth_url           = "the url for authentication such as http://192.168.0.10:5000/v3"
+region             = "RegionName-Here"
+project_name       = "PrivateCloud-lab"
+username           = "your-username"
+password           = "your-password"
+external_network   = "provider_or_othername_used"
+image_name         = "ubuntu-18.04"
+flavor_name        = "m1.small"
