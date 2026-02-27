@@ -1,14 +1,47 @@
+######################################
+# Terraform
+######################################
+
+# Local terraform directories
 **/.terraform/
-**/.terraform.lock.hcl
-**/terraform.tfstate
-**/terraform.tfstate.backup
+
+# Lock file (keep if using dependency pinning)
+# Comment this line if you WANT to commit .terraform.lock.hcl
+# **/.terraform.lock.hcl
+
+# State files
 **/*.tfstate
 **/*.tfstate.*
+**/.terraform.tfstate.lock.info
+
+# Crash logs
 **/crash.log
 **/crash.*.log
 
-# Lab keys
-**/*.pem
+# Override files
+**/override.tf
+**/override.tf.json
+**/*_override.tf
+**/*_override.tf.json
 
-# OpenStack lab keys
-openstack/**/**.pem
+# Variable files (sensitive)
+**/*.tfvars
+**/*.auto.tfvars
+
+######################################
+# Secrets & Keys
+######################################
+**/*.pem
+**/*.key
+**/*.p12
+**/*.env
+
+######################################
+# OS / Editor junk
+######################################
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
