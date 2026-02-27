@@ -9,3 +9,6 @@
 
 # Lab keys
 **/*.pem
+
+# OpenStack lab keys
+openstack/**/**.pem
