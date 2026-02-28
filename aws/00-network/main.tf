@@ -1,5 +1,6 @@
 provider "aws" {
   region = var.aws_region
+  profile = "lab-sso"
 }
 
 resource "aws_vpc" "lab_vpc" {
