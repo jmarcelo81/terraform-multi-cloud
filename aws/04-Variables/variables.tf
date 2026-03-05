@@ -1,15 +1,7 @@
-variable "vpn_ip" {
-    default = "104.203.46.2/32"
-}
+variable "vpn_ip" {}
 
-variable "app_port" {
-    default = "8080"
-}
+variable "app_port" {}
 
-variable "ssh_port" {
-    default = "22"
-}
+variable "ssh_port" {}
 
-variable "ftp_port" {
-    default = "21"
-}
+variable "ftp_port" {}
