@@ -1,0 +1,45 @@
+provider "aws" {
+  region  = "us-east-2"
+  profile = "lab-sso"
+}
+
+resource "aws_security_group" "db_demo_sg" {
+  name        = "lab-dynamic-block-sg"
+  description = "Old way of creating ingress rules"
+
+  ingress {
+    from_port = 8200
+    to_port = 8200
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = 8201
+    to_port = 8201
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = 8300
+    to_port = 8300
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = 8800
+    to_port = 8800
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = 9100
+    to_port = 9100
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  
+}
