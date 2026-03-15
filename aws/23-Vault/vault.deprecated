@@ -1,0 +1,21 @@
+provider "vault" {
+    address = "http://10.10.20.12:8200"
+    skip_child_token = true
+}
+
+
+data "vault_kv_secret_v2" "mysecret" {
+  mount = "secrets"
+  name  = "db_creds_tf_demo"
+}
+
+output "vault_secrets" {
+  value = data.vault_kv_secret_v2.mysecret
+  sensitive = true
+}
+
+resource "local_file" "secrets_file" {
+  filename = "secrets.txt"
+
+  content = jsonencode(data.vault_kv_secret_v2.mysecret.data)
+}
